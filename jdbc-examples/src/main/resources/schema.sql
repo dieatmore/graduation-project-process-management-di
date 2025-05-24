@@ -16,6 +16,7 @@ create table if not exists `user`
     role          varchar(20)      not null,
     student       json             comment '{"year", "teacherId", "projectTitle"}',
     teacher       json             comment '{"teachNumber"}',
+    score         tinyint unsigned null,
     insert_time   datetime         not null default current_timestamp,
     update_time   datetime         not null default current_timestamp on update current_timestamp,
 
@@ -61,5 +62,5 @@ create table if not exists `process_score`
     insert_time   datetime    not null default current_timestamp,
     update_time   datetime    not null default current_timestamp on update current_timestamp,
 
-    unique ( student_id, process_id, teacher_id)
+    unique(student_id, process_id, teacher_id)
 );
