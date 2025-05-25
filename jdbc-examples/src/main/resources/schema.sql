@@ -9,9 +9,9 @@ create table if not exists `department`
 create table if not exists `user`
 (
     id            char(19)         not null primary key,
-    number        varchar(20)      unique not null,
+    account       char(10)      unique not null,
     password      varchar(65)      not null,
-    name          varchar(20)      not null,
+    name          varchar(8)      not null,
     department_id char(19)         not null,
     role          varchar(20)      not null,
     group_number  tinyint unsigned null,
@@ -29,7 +29,7 @@ create table if not exists `process`
     id              char(19)           not null primary key,
     name            varchar(20)        not null,
     items           json               comment '[{"number", "name", "point", "description"}]',
-    proportion      varchar(20)        not null,
+    proportion      tinyint unsigned   not null,
     department_id   char(19)           not null,
     auth            varchar(10)        not null,  -- 每个过程定义对应权限
     file            json               null comment '[{"id", "name", "type", "path"}]',
