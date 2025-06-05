@@ -10,5 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>jdbc-examples</module>
+        <module>springmvc-examples</module>
+        <module>backend-examples</module>
     </modules>
 </project>

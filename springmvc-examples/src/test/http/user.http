@@ -1,0 +1,8 @@
+### 学生更新密码
+PATCH localhost:8080/api/user/password
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxIiwicm9sZSI6InVXcTIiLCJpYXQiOjE3NDkxMjk4ODksImV4cCI6MTc0OTIxNjI4OX0.K_ziH6MOq5l3C7fdOos2GPh4zdnzU38wCmFSQ108u-E
+Content-Type: application/json
+
+{
+  "password": "666666"
+}
